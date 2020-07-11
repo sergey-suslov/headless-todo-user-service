@@ -10,4 +10,6 @@ public interface UserDao extends CrudRepository<UserEntity, Long> {
   <S extends UserEntity> S save(S entity);
 
   <S extends UserEntity> S findByEmail(String email);
+
+  <S extends UserEntity> S findById(long id);
 }

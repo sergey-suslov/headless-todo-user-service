@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
 @Repository
-@Qualifier("Postgre")
 public class UserRepositoryImpl implements UserRepository {
   UserDao userDao;
 
@@ -25,5 +24,10 @@ public class UserRepositoryImpl implements UserRepository {
   @Override
   public UserEntity findUserByEmail(String email) {
     return userDao.findByEmail(email);
+  }
+
+  @Override
+  public UserEntity findUserById(long id) {
+    return userDao.findById(id);
   }
 }

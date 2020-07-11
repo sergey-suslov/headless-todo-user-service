@@ -18,7 +18,6 @@ public class UserService {
   private JwtEncoder jwtEncoder;
 
   @Autowired
-  @Qualifier("Postgre")
   public void setUserRepository(UserRepository userRepository) {
     this.userRepository = userRepository;
   }
