@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_package = "com.example.springweb.adapters.userservice";
+option java_multiple_files = true;
+
+service UserService {
+  rpc GetProfile (GetProfileRequest) returns (GetProfileResponse) {}
+}
+
+message GetProfileRequest {
+  string userId = 1;
+}
+
+message GetProfileResponse {
+  string id = 1;
+  string email = 2;
+}
